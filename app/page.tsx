@@ -2,8 +2,6 @@ import DashSmTable1 from '#/ui/dash-sm-table1';
 import DashSmTable2 from '#/ui/dash-sm-table2';
 import ColorToggleButton from '#/ui/colortogglebutton';
 import MoreButton from '#/ui/more-button';
-
-
 // import DashSmTable2 from '#/ui/dash-sm-table2';
 // import DashSmTable3 from '#/ui/dash-sm-table3';
 import Link from 'next/link';
@@ -22,7 +20,6 @@ export default function Page() {
                 <ColorToggleButton />
                 <MoreButton />
               </div>
-              
               <DashSmTable1 />
             </div>
             <div className="font-medium text-gray-200 group-hover:text-gray-50 dark-tb rounded-xl">
