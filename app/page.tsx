@@ -2,7 +2,7 @@ import DashSmTable1 from '#/ui/dash-sm-table1';
 import DashSmTable2 from '#/ui/dash-sm-table2';
 import ColorToggleButton from '#/ui/colortogglebutton';
 import MoreButton from '#/ui/more-button';
-import '#/app/styling/global-css/styles.css'
+
 
 // import DashSmTable2 from '#/ui/dash-sm-table2';
 // import DashSmTable3 from '#/ui/dash-sm-table3';
@@ -37,8 +37,11 @@ export default function Page() {
               <DashSmTable2 />
             </div>
           </div>
+
         </div>
       </div>
     </div>
   );
 }
+
+
