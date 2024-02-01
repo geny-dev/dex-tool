@@ -52,3 +52,67 @@
 .skeleton-line-two {
   width: 66.666667%;
 }
+.token-logo__image {
+  height: 20px;
+  border-radius: 50%;
+}
+.dark-tb {
+  background-color: #142028;
+}
+.dash-key-td {
+  color: white;
+}
+.dash-sm-tr:hover {
+  background-color: #262c43;
+}
+
+.p-color-right {
+  font-size: 14px;
+  color: #fff;
+}
+
+.p-color-left {
+  font-size: 12px;
+  color: #818ea3;
+}
+
+.p-currency {
+  font-size: 13px;
+  color: #17c671!important;
+}
+
+.active-btn > .Mui-selected {
+  color: white!important;
+}
+.first-id-td {
+  width: 5%;
+  padding: 16px ;
+}
+.second-avatar-td {
+  width: 30px;
+  padding: 16px 5px;
+}
+.third-tran-td {
+  padding: 16px 2px;
+  width: 35%;
+  float: left;
+}
+
+.MuiTableCell-root > svg > path {
+  background-color: green;
+}
+.avatar-group {
+  color: white;
+}
+.avatar-group > div> svg {
+  width: 15px !important;
+}
+.avatar-group > div :hover {
+  cursor: pointer;
+}
+.lastitem {
+  color: #00b8d8;
+}
+.percentimg {
+  color: #17c671!important;
+}
