@@ -24,8 +24,8 @@ export default function ColorToggleButton() {
       onChange={handleChange}
       aria-label="Platform"
     >
-      <ToggleButton value="web">Web</ToggleButton>
-      <ToggleButton value="android">Android</ToggleButton>
+      <ToggleButton value="web">Daily gainers</ToggleButton>
+      <ToggleButton value="android">Daily losers</ToggleButton>
     </ToggleButtonGroup>
   );
 }
