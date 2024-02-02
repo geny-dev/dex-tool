@@ -9,6 +9,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Dropdown from '#/ui/Dropdown';
 
+
+
+
+
+
 function createData(
   key: string,
   avatar: string,
@@ -68,7 +73,7 @@ const rows = datas.map((data) => {
     return createData(data.key, data.avatar, data.tranName, data.currency, data.percentImg, data.percent);
 });
 
-export default function DashSmTable1() {
+export default function DashHotpair() {
   return (
     <div className="font-medium text-gray-200 group-hover:text-gray-50 dark-tb rounded-xl p-5">
       <div className='flex justify-between'>
