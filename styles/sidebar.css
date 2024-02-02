@@ -69,7 +69,6 @@ border-radius: 2px;
 {
 width: 5px;
 background-color: #F7F7F7;
-}
 
 #style-1::-webkit-scrollbar-thumb
 {
@@ -121,7 +120,6 @@ transition:width .2s linear;
 box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity:1;
 }
-
 .main-menu>ul {
 margin:7px 0;
 
@@ -250,13 +248,6 @@ margin:0;
 padding:0;
 text-transform: uppercase;
 }
-
-
-
-
-/* Darker element side menu Start*/
-
-
 .darkerli
 {
 background-color:#ededed;
@@ -272,7 +263,6 @@ text-transform:capitalize;
 box-shadow:         inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
 }
 
-
 .darkerlishadowdown
 {
 background-color:#ededed;
@@ -283,7 +273,6 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 }
 
 /* Darker element side menu End*/
-
 
 .main-menu ul li {
     padding: 7px 0; /* Adjust the padding as needed */
@@ -308,27 +297,6 @@ height: 100%;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .extra-heading {
     font-size: 10px; /* Adjust the font size as needed */
   }
@@ -344,20 +312,6 @@ height: 100%;
   .extra-text {
     font-size: 14px; /* Adjust the font size as needed */
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Add this CSS to change icon color when hovering over the row */
 .nav-menu li:hover .icon {
