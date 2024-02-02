@@ -3,6 +3,7 @@ import { AddressBar } from '#/ui/address-bar';
 import Byline from '#/ui/byline';
 import { GlobalNav } from '#/ui/global-nav';
 import { Metadata } from 'next';
+import Footer from '#/ui/footer'; // Import the Footer component
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +42,9 @@ export default function RootLayout({
             <Byline className="fixed sm:hidden" />
           </div>
         </div>
+        
       </body>
+      <Footer /> {/* Include the Footer component */}
     </html>
   );
 }
