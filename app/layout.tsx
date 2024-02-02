@@ -43,8 +43,8 @@ export default function RootLayout({
           </div>
         </div>
         
+        <Footer /> {/* Include the Footer component */}
       </body>
-      <Footer /> {/* Include the Footer component */}
     </html>
   );
 }

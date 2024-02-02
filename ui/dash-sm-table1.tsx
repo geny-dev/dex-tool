@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -7,84 +6,76 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Api } from '@mui/icons-material';
+import axios from 'axios';
+import Button from './button';
+import { ColorSwatchIcon } from '@heroicons/react/outline';
 
-function createData(
-  key: string,
-  avatar: string,
-  tranName: string,
-  currency: string,
-  percentImg: string,
-  percent: string,
-) {
-  return { key, avatar, tranName, currency, percentImg, percent };
-}
+export default async function DashSmTable() {
+  function createData(
+    id: string,
+    avatar: object,
+    name: string,
+    tras: string,
+    percents: string,
+  ) {
+    return { id, avatar, name, tras, percents };
+  }
+  async function getdata (){
+    try {
+      const response = await axios
+        .create({
+          baseURL: 'http://localhost:3000',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+        })
+        .get('/new-func/top-earner');
+        return(response.data.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  const datas = await getdata();
+  // console.log(datas)
 
-const datas = [
-    {
-        key : "#1", 
-        avatar: <img src='https://www.dextools.io/resources/tokens/logos/ether/0x01b7ca09d62069301c6a8569ef99d0d1b6aba7b9.jpg?1706646182920' className='token-logo__image ng-star-inserted' />,
-        tranName: <p className='p-color-right'><strong>DEFI</strong>/WETH</p>,
-        currency: <p className='p-currency'>$0.005803</p>,
-        percentImg: <svg className="percentimg" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 22 22" width="6" transform=""><path d="M13.2223 13.2223L9.88883 16.5558C8.66147 17.7832 6.67152 17.7832 5.44416 16.5558C4.2168 15.3285 4.2168 13.3385 5.44416 12.1112L8.77767 8.77767L0 0H22V22L13.2223 13.2223Z" fill="currentColor"></path></svg>,
-        percent: <p className='p-currency'>1039.53%</p>
-    },
-    {
-        key : "#1", 
-        avatar: <img src='https://www.dextools.io/resources/tokens/logos/ether/0x01b7ca09d62069301c6a8569ef99d0d1b6aba7b9.jpg?1706646182920' className='token-logo__image ng-star-inserted' />,
-        tranName: <p className='p-color-right'><strong>DEFI</strong>/WETH</p>,
-        currency: <p className='p-currency'>$0.005803</p>,
-        percentImg: <svg className="percentimg" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 22 22" width="6" transform=""><path d="M13.2223 13.2223L9.88883 16.5558C8.66147 17.7832 6.67152 17.7832 5.44416 16.5558C4.2168 15.3285 4.2168 13.3385 5.44416 12.1112L8.77767 8.77767L0 0H22V22L13.2223 13.2223Z" fill="currentColor"></path></svg>,
-        percent: <p className='p-currency'>1039.53%</p>
-    },
-    {
-        key : "#1", 
-        avatar: <img src='https://www.dextools.io/resources/tokens/logos/ether/0x01b7ca09d62069301c6a8569ef99d0d1b6aba7b9.jpg?1706646182920' className='token-logo__image ng-star-inserted' />,
-        tranName: <p className='p-color-right'><strong>DEFI</strong>/WETH</p>,
-        currency: <p className='p-currency'>$0.005803</p>,
-        percentImg: <svg className="percentimg" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 22 22" width="6" transform=""><path d="M13.2223 13.2223L9.88883 16.5558C8.66147 17.7832 6.67152 17.7832 5.44416 16.5558C4.2168 15.3285 4.2168 13.3385 5.44416 12.1112L8.77767 8.77767L0 0H22V22L13.2223 13.2223Z" fill="currentColor"></path></svg>,
-        percent: <p className='p-currency'>1039.53%</p>
-    },
-    {
-        key : "#1", 
-        avatar: <img src='https://www.dextools.io/resources/tokens/logos/ether/0x01b7ca09d62069301c6a8569ef99d0d1b6aba7b9.jpg?1706646182920' className='token-logo__image ng-star-inserted' />,
-        tranName: <p className='p-color-right'><strong>DEFI</strong>/WETH</p>,
-        currency: <p className='p-currency'>$0.005803</p>,
-        percentImg: <svg className="percentimg" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 22 22" width="6" transform=""><path d="M13.2223 13.2223L9.88883 16.5558C8.66147 17.7832 6.67152 17.7832 5.44416 16.5558C4.2168 15.3285 4.2168 13.3385 5.44416 12.1112L8.77767 8.77767L0 0H22V22L13.2223 13.2223Z" fill="currentColor"></path></svg>,
-        percent: <p className='p-currency'>1039.53%</p>
-    },
-    {
-        key : "#1", 
-        avatar: <img src='https://www.dextools.io/resources/tokens/logos/ether/0x01b7ca09d62069301c6a8569ef99d0d1b6aba7b9.jpg?1706646182920' className='token-logo__image ng-star-inserted' />,
-        tranName: <p className='p-color-right'><strong>DEFI</strong>/WETH</p>,
-        currency: <p className='p-currency'>$0.005803</p>,
-        percentImg: <svg className="percentimg" fill='currentColor' xmlns='http://www.w3.org/2000/svg' focusable='false' aria-hidden='true' viewBox='0 0 22 22' width='6' transform=''><path d='M13.2223 13.2223L9.88883 16.5558C8.66147 17.7832 6.67152 17.7832 5.44416 16.5558C4.2168 15.3285 4.2168 13.3385 5.44416 12.1112L8.77767 8.77767L0 0H22V22L13.2223 13.2223Z' fill='currentColor'></path></svg>,
-        percent: <p className='p-currency'>1039.53%</p>
-    },
+  const percentupImg = <svg className="text-green-700 inline-block" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 22 22" width="6" transform=""><path d="M13.2223 13.2223L9.88883 16.5558C8.66147 17.7832 6.67152 17.7832 5.44416 16.5558C4.2168 15.3285 4.2168 13.3385 5.44416 12.1112L8.77767 8.77767L0 0H22V22L13.2223 13.2223Z" fill="currentColor"></path></svg>
+  const percentdownImg = <svg className="text-red-600 inline-block" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 22 22" width="6" transform=""><path d="M13.2223 8.77766L9.88883 5.44416C8.66147 4.2168 6.67152 4.2168 5.44416 5.44416C4.2168 6.67152 4.2168 8.66147 5.44416 9.88883L8.77767 13.2223L0 22L22 22L22 0L13.2223 8.77766Z" fill="currentColor"></path></svg>
 
-];
 
-const rows = datas.map((data) => {
-    return createData(data.key, data.avatar, data.tranName, data.currency, data.percentImg, data.percent);
-});
-
-export default function DashSmTable1() {
+  const rows = new Array();
+  for(let i = 0; i < datas.length; i ++){
+    const row_ele = createData(
+      ('#'+ (i+1)).toString(),                                                  //id
+      <img src='https://www.dextools.io/resources/tokens/logos/ether/0x01b7ca09d62069301c6a8569ef99d0d1b6aba7b9.jpg?1706646182920' className='token-logo__image ng-star-inserted' />,                                                                 //avatar
+      datas[i].baseCurrency.symbol+'/'+datas[i].quoteCurrency.symbol,           //baseCurrency
+      '$'+datas[i].first_trade_price,                                           //price
+      parseInt(datas[i].final).toFixed(2) + '%'                                                            //percent
+    );
+    rows.push(row_ele);
+  }
   return (
-    <TableContainer className='rounded-none table-fixed' component={Paper}>
+    <TableContainer className='rounded-none' component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableBody className='dark-tb'>
-          {rows.map((row) => (
+          {rows.map((row, index) => (
             <TableRow
-              key={row.key}
+              className='dash-sm-tr'
+              key={index}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              className='dash-sm-tr' 
             >
-              <TableCell component="td" scope="row" className='dash-key-td border-none first-id-td'>
-                {row.key}
+              <TableCell component="th" scope="row" className='dash-key-td border-none'>
+                {row.id}
               </TableCell>
-              <TableCell className='border-none second-avatar-td' align="right">{row.avatar}</TableCell>
-              <TableCell className='border-none third-tran-td' align="right">{row.tranName}</TableCell>
-              <TableCell className='border-none forth-currency-td' align="right">{row.currency}</TableCell>
-              <TableCell className='border-none fixth-percent-td float-right'><div className='flex space-x-2'>{row.percentImg}{row.percent}</div></TableCell>
+              <TableCell className='border-none' align="right">{row.avatar}</TableCell>
+              <TableCell className='border-none p-color-right' align="right">{row.name}</TableCell>
+              <TableCell className='border-none p-currency' align="right">{row.tras}</TableCell>
+              {parseInt(row.percents)>0? 
+              <TableCell className='border-none' align="right">{percentupImg}&nbsp;&nbsp;<span className='inline-block p-currency'>{row.percents}</span></TableCell>
+              :
+              <TableCell className='border-none' align="right">{percentdownImg}&nbsp;&nbsp;<span className='text-sm inline-block text-red-600'>{row.percents}</span></TableCell>
+              }
             </TableRow>
           ))}
         </TableBody>
