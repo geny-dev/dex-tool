@@ -116,3 +116,8 @@
 .percentimg {
   color: #17c671!important;
 }
+@media (min-width: 1024px) {
+  .custom-lg-nav{
+      width: 3rem !important;
+  }
+}
