@@ -7,11 +7,23 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import clsx from 'clsx';
 import { useState } from 'react';
 import Byline from './byline';
-import '../styles/sidebar.css';
+import "../styles/sidebar.css";
 import Image from 'next/image';
-import dextoolsLogo from './dextools_logo.jpeg'; // Import the image with the correct path
+import dextoolsLogo from "./dextools_logo.jpeg"; // Import the image with the correct path
 import HomeIcon from '@mui/icons-material/Home';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import AutoModeIcon from '@mui/icons-material/AutoMode';
+import DatasetLinkedIcon from '@mui/icons-material/DatasetLinked';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import PersonIcon from '@mui/icons-material/Person';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LanguageIcon from '@mui/icons-material/Language';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,19 +32,13 @@ export function GlobalNav() {
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800 custom-lg-nav">
+
+
       <main className="cd__main">
+
         <nav className="main-menu">
-          <li className="space-line"></li>
           <div className="logo-wrapper">
-            <div className="logo-container">
-              <Image
-                src={dextoolsLogo}
-                width={40}
-                height={40}
-                alt="DEXTools Logo"
-                style={{ marginLeft: '6px' }}
-              />
-            </div>
+            <Image src={dextoolsLogo} width={40} height={40} />
           </div>
           <li className="space-line"></li>
           <div className="scrollbar" id="style-1">
@@ -301,203 +307,112 @@ export function GlobalNav() {
                   <span className="nav-text">Wallet Info</span>
                 </a>
               </li>
+          <div className="scrollbar" id="style-1">
+            <ul className="nav-menu">
+              <li className="dextboard">
+                <a href="http://startific.com"><HomeIcon className="icon" style={{ color: 'rgb(161, 170, 181)' }}/>
+                  <i className="fa fa-user fa-lg"></i>
+                  <span className="nav-text">DEXTboard</span>
+                </a>
+              </li>
 
               <li>
-                <a href="http://startific.com">
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="user"
-                    className="svg-inline--fa fa-user fa-lg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    style={{
-                      width: '23px',
-                      height: '23px',
-                      marginLeft: '10px',
-                    }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-                    ></path>
-                  </svg>
+                <a href="http://startific.com"><AnalyticsIcon />
+                  <i className="fa fa-user fa-lg"></i>
+                  <span className="nav-text">Pair Explorer</span>
+                </a>
+              </li>
+
+
+              <li>
+                <a href="http://startific.com"><RocketLaunchIcon />
+                  <i className="fa fa-envelope-o fa-lg"></i>
+                  <span className="nav-text">Live New Pairs</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://startific.com"><AutoModeIcon />
+                  <i className="fa fa-envelope-o fa-lg"></i>
+                  <span className="nav-text">Big Swap Explorer</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://startific.com"><DatasetLinkedIcon />
+                  <i className="fa fa-envelope-o fa-lg"></i>
+                  <span className="nav-text">Multichart</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://startific.com"><AutorenewIcon />
+                  <i className="fa fa-envelope-o fa-lg"></i>
+                  <span className="nav-text">Multiswap</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://startific.com"><RocketLaunchIcon />
+                  <i className="fa fa-envelope-o fa-lg"></i>
+                  <span className="nav-text">Stats</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://startific.com"><AccountBalanceWalletIcon />
+                  <i className="fa fa-envelope-o fa-lg"></i>
+                  <span className="nav-text">Wallet Info</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://startific.com"><PersonIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">User Area</span>
                 </a>
               </li>
 
               <li>
-                <a href="http://startific.com">
-                  <AddCircleIcon className="icon" />
+                <h5 className="extra-heading">EXTRA</h5>
+                <a href="http://startific.com"><AddCircleIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">Products</span>
                 </a>
               </li>
 
               <li>
-                <li className="space-line"></li>
-                <h5 className="extra-heading" style={{ marginLeft: '10px' }}>
-                  EXTRA
-                </h5>
-                <a href="http://startific.com">
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="chart-mixed-up-circle-dollar"
-                    className="svg-inline--fa fa-chart-mixed-up-circle-dollar"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"
-                    style={{
-                      width: '23px',
-                      height: '23px',
-                      marginLeft: '10px',
-                    }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M400 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h28.8L319.4 151.5 211.2 70.4c-11.7-8.8-27.8-8.5-39.2 .6L12 199c-13.8 11-16 31.2-5 45s31.2 16 45 5L192.6 136.5l108.2 81.1c11.7 8.8 27.8 8.5 39.2-.6L480 105v39c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H400zM192 224c-17.7 0-32 14.3-32 32V448c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-17.7-14.3-32-32-32zM64 320c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V352c0-17.7-14.3-32-32-32zM432 512a144 144 0 1 0 0-288 144 144 0 1 0 0 288zM408.1 339l0 .1c0 .4 0 1.9 4.8 4.5c5.6 3 13.5 5.2 23.9 8.2l.2 0c9.3 2.6 21.1 6 30.5 11.5c10.2 6 20 16.1 20.5 32.3c.5 18.2-9.7 30.4-21.7 36.9c-5.8 3.1-12.1 5.1-18.3 6.2v10.8c0 8.8-7.2 16-16 16s-16-7.2-16-16V438.1c-8.6-1.7-16.7-4.3-23.7-6.6l0 0 0 0c-1.7-.6-3.4-1.1-5-1.6c-8.4-2.6-13.2-11.6-10.5-20s11.6-13.2 20-10.5c2 .6 3.9 1.2 5.8 1.8c11.4 3.6 20.4 6.5 29.9 6.8c6.7 .2 13.8-1.1 18.5-3.6c2.2-1.2 3.4-2.4 4-3.3c.5-.8 1.1-2.1 1-4.5c0-1.4-.2-3-4.7-5.6c-5.3-3.1-12.9-5.4-23.2-8.3l-1.8-.5c-8.9-2.5-19.8-5.6-28.6-10.3c-9.9-5.3-20.6-14.7-21.6-30.7c-1.2-18.8 10-30.9 21.8-37.2c5.7-3.1 12-5.1 18-6.3V288c0-8.8 7.2-16 16-16s16 7.2 16 16v9.4c6.3 .9 12.3 2.3 17.9 3.7c8.6 2.1 13.8 10.8 11.7 19.4s-10.8 13.8-19.4 11.7c-9.3-2.3-18.2-4-26.4-4.1c-6.2-.1-13.6 1.3-18.7 4c-2.4 1.3-3.6 2.5-4.2 3.4c-.4 .7-.9 1.6-.8 3.6z"
-                    ></path>
-                  </svg>
+                <a href="http://startific.com"><QueryStatsIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">Simulator</span>
                 </a>
               </li>
 
               <li>
-                <a href="http://startific.com">
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="display-chart-up"
-                    className="svg-inline--fa fa-display-chart-up fa-lg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"
-                    style={{
-                      width: '23px',
-                      height: '23px',
-                      marginLeft: '10px',
-                    }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M0 64C0 28.7 28.7 0 64 0H512c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336l10.7 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32h69.3L240 416H64c-35.3 0-64-28.7-64-64V64zm64 0V352H512V64H64zM376 96h80c13.3 0 24 10.7 24 24v80c0 13.3-10.7 24-24 24s-24-10.7-24-24V177.9L321 289c-4.5 4.5-10.6 7-17 7s-12.5-2.5-17-7l-63-63-87 87c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L207 175c9.4-9.4 24.6-9.4 33.9 0l63 63L398.1 144H376c-13.3 0-24-10.7-24-24s10.7-24 24-24z"
-                    ></path>
-                  </svg>
+                <a href="http://startific.com"><DisplaySettingsIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">DEXTswap</span>
                 </a>
               </li>
 
               <li>
-                <a href="http://startific.com">
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="fire"
-                    className="svg-inline--fa fa-fire"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    style={{
-                      width: '23px',
-                      height: '23px',
-                      marginLeft: '10px',
-                    }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M159.3 5.4c7.8-7.3 19.9-7.2 27.7 .1c27.6 25.9 53.5 53.8 77.7 84c11-14.4 23.5-30.1 37-42.9c7.9-7.4 20.1-7.4 28 .1c34.6 33 63.9 76.6 84.5 118c20.3 40.8 33.8 82.5 33.8 111.9C448 404.2 348.2 512 224 512C98.4 512 0 404.1 0 276.5c0-38.4 17.8-85.3 45.4-131.7C73.3 97.7 112.7 48.6 159.3 5.4zM225.7 416c25.3 0 47.7-7 68.8-21c42.1-29.4 53.4-88.2 28.1-134.4c-4.5-9-16-9.6-22.5-2l-25.2 29.3c-6.6 7.6-18.5 7.4-24.7-.5c-16.5-21-46-58.5-62.8-79.8c-6.3-8-18.3-8.1-24.7-.1c-33.8 42.5-50.8 69.3-50.8 99.4C112 375.4 162.6 416 225.7 416z"
-                    ></path>
-                  </svg>
+                <a href="http://startific.com"><LocalFireDepartmentIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">Burn</span>
                 </a>
               </li>
 
               <li>
-                <a href="http://startific.com">
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="youtube"
-                    className="svg-inline--fa fa-youtube"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"
-                    style={{
-                      width: '23px',
-                      height: '23px',
-                      marginLeft: '10px',
-                    }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                    ></path>
-                  </svg>
+                <a href="http://startific.com"><YouTubeIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">DEXTools Academy</span>
                 </a>
               </li>
-
               <li>
-                <a href="http://startific.com">
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="globe"
-                    className="svg-inline--fa fa-globe"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    style={{
-                      width: '23px',
-                      height: '23px',
-                      marginLeft: '10px',
-                    }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"
-                    ></path>
-                  </svg>
+                <a href="http://startific.com"><LanguageIcon />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">Web</span>
                 </a>
-              </li>
-              <li>
-                <li className="space-line"></li>
-                <button
-                  className="round-rectangle-button"
-                  style={{ marginLeft: '10px' }}
-                >
-                  <svg
-                    role="img"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="far"
-                    data-icon="message-pen"
-                    className="svg-inline--fa fa-message-pen"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1000 512"
-                    style={{ marginLeft: '9px' }}
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M208 416c0-26.5-21.5-48-48-48H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H448c8.8 0 16 7.2 16 16V352c0 8.8-7.2 16-16 16H309.3c-10.4 0-20.5 3.4-28.8 9.6L208 432V416zm-.2 76.2l.2-.2 101.3-76H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h48 48v48 4 .3 6.4V496c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L202.7 496l5.1-3.8zM340.8 123c-14.7-14.7-38.6-14.7-53.3 0L272.6 138l53.3 53.3 14.9-14.9c14.7-14.7 14.7-38.6 0-53.3zM178.1 232.5c-4.1 4.1-7 9.2-8.4 14.9L160.5 284c-1.4 5.5 .2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l36.6-9.2c5.6-1.4 10.8-4.3 14.9-8.4l71.9-71.9L250 160.6l-71.9 71.9z"
-                    ></path>
-                  </svg>
-                </button>
               </li>
             </ul>
           </div>
