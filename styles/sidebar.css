@@ -68,7 +68,7 @@ border-radius: 2px;
 #style-1::-webkit-scrollbar
 {
 width: 5px;
-background-color: #F7F7F7;
+background-color: #142028;
 }
 
 #style-1::-webkit-scrollbar-thumb
@@ -121,7 +121,14 @@ transition:width .2s linear;
 box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity:1;
 }
-
+.main-menu li a {
+    display: block; /* Ensure anchor elements take up the full width */
+    padding: 20px; /* Adjust padding as needed */
+    height: 45px; /* Adjust height as needed */
+    line-height: 20px; /* Adjust line-height as needed */
+    text-decoration: none; /* Remove default underline */
+    color: #fff; /* Text color */
+}
 .main-menu>ul {
 margin:7px 0;
 
@@ -142,7 +149,7 @@ width:255px;
 display:table;
 border-collapse:collapse;
 border-spacing:0;
-color:#fafafa;
+color:#8494ac;
 font-size: 13px;
 text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
@@ -251,12 +258,7 @@ padding:0;
 text-transform: uppercase;
 }
 
-
-
-
 /* Darker element side menu Start*/
-
-
 .darkerli
 {
 background-color:#ededed;
@@ -272,10 +274,9 @@ text-transform:capitalize;
 box-shadow:         inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
 }
 
-
 .darkerlishadowdown
 {
-background-color:#ededed;
+background-color:#ededed; 
 text-transform:capitalize;  
 -webkit-box-shadow: inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 -moz-box-shadow:    inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
@@ -284,17 +285,19 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 
 /* Darker element side menu End*/
 
-
 .main-menu ul li {
-    padding: 7px 0; /* Adjust the padding as needed */
+    padding: 0px 0; /* Adjust the padding as needed */
     line-height: 1.5; /* Adjust the line height as needed */
+
   }
 
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
-background-color:#263138;
+background-color:#23323C;
 text-shadow: 0px 0px 0px; 
+
 }
+
 .area {
 float: left;
 background: #e2e2e2;
@@ -307,27 +310,6 @@ height: 100%;
   font-weight: 300;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .extra-heading {
     font-size: 10px; /* Adjust the font size as needed */
@@ -345,21 +327,52 @@ height: 100%;
     font-size: 14px; /* Adjust the font size as needed */
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Add this CSS to change icon color when hovering over the row */
 .nav-menu li:hover .icon {
   color: white; /* Change the color to white on hover */
+  
+}
+
+/* Define the style for the empty list item */
+.extra-space {
+  height: 20px; /* Adjust the height as needed */
+  list-style: none; /* Remove bullet point */
+}
+
+/* Add hover effect to the icon */
+.nav-menu li a:hover .icon {
+  color: rgb(255, 255, 255);
+
+}
+
+.nav-menu li a {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  padding: 6px; /* Adjust padding as needed */
+  text-decoration: none; /* Remove default underline */
+
+}
+.icon {
+  margin-left: 8px;
+}
+
+.space-line {
+  height: 0px; /* Adjust the height as needed */
+  background-color: transparent; /* Set the background color */
+  margin-bottom: 10px; /* Adjust margin-bottom for spacing */
+}
+
+.round-rectangle-button {
+  border: none;
+  border-radius: 8px; /* Adjust border-radius as needed */
+  background-color: #31404b; /* Set button background color */
+  color: white; /* Set button text color */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.round-rectangle-button:hover {
+  background-color: #40D7EE; /* Change background color on hover */
 }
