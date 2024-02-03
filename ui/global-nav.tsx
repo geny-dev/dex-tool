@@ -19,7 +19,7 @@ export function GlobalNav() {
   const segment = useSelectedLayoutSegment();
 
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800 custom-lg-nav">
+    <div className="custom-lg-nav fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <main className="cd__main">
         <nav className="main-menu">
           <li className="space-line"></li>
@@ -38,7 +38,7 @@ export function GlobalNav() {
           <div className="scrollbar" id="style-1">
             <ul className="nav-menu">
               <li className="dextboard">
-                <a href="http://startific.com">
+                <a >
                   <HomeIcon className="icon" />
                   <i className="fa fa-envelope-o fa-lg"></i>
                   <span className="nav-text">DEXTboard</span>
@@ -336,12 +336,13 @@ export function GlobalNav() {
                   <span className="nav-text">Products</span>
                 </a>
               </li>
-
+              <li className="space-line"></li>
+              <h5 className="extra-heading" style={{ marginLeft: '10px' }}>
+                EXTRA
+              </h5>
+              <li className="space-line"></li>
               <li>
-                <li className="space-line"></li>
-                <h5 className="extra-heading" style={{ marginLeft: '10px' }}>
-                  EXTRA
-                </h5>
+               
                 <a href="http://startific.com">
                   <svg
                     role="img"
@@ -475,8 +476,9 @@ export function GlobalNav() {
                   <span className="nav-text">Web</span>
                 </a>
               </li>
+              <li className="space-line"></li>
               <li>
-                <li className="space-line"></li>
+                
                 <button
                   className="round-rectangle-button"
                   style={{ marginLeft: '10px' }}
